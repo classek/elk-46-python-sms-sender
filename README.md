@@ -4,9 +4,13 @@ This Python script provides a graphical user interface (GUI) for sending SMS mes
 The GUI is built using the Tkinter library and allows users to input their 46elks credentials, message details, and optional settings.
 
 This requires account and credits on:
+
 https://46elks.com/
+or
 https://46elks.se/
+or
 https://46elks.fi/
+or
 https://46elks.hr/
 
 
