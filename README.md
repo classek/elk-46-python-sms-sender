@@ -1,4 +1,5 @@
 46elks SMS Sender GUI
+
 This Python script provides a graphical user interface (GUI) for sending SMS messages using the 46elks SMS API. 
 The GUI is built using the Tkinter library and allows users to input their 46elks credentials, message details, and optional settings.
 
