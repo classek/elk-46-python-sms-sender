@@ -11,22 +11,20 @@ def send_sms():
     phone_number = phone_entry.get()
     sender_name = sender_entry.get()
 
-    # Encode the credentials in base64
-    credentials = base64.b64encode(f'{username}:{password}'.encode('utf-8')).decode('utf-8')
-
-    # Build the URL with selected options
-    url = f"https://api.46elks.com/a1/sms/POST?to={phone_number}&from={sender_name}&message={message}"
-    if flashsms_var.get() == 1:
-        url += "&flashsms=yes"
-    if dryrun_var.get() == 1:
-        url += "&dryrun=yes"
-
-    payload = {}
-    headers = {
-        'Authorization': f'Basic {credentials}'
+    payload = {
+            'to': phone_number,
+            'from': sender_name,
+            'message': message,
     }
 
-    response = requests.request("POST", url, headers=headers, data=payload)
+    if flashsms_var.get():
+        payload['flashsms'] = 'yes'
+    if dryrun_var.get():
+        payload['dryrun'] = 'yes'
+
+    url = "https://api.46elks.com/a1/sms"
+
+    response = requests.post(url, data=payload, auth=(username, password))
 
     result_label.config(text=response.text)
 
