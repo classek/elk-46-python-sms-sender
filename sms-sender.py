@@ -22,8 +22,7 @@ def send_sms():
     if dryrun_var.get():
         payload['dryrun'] = 'yes'
 
-    # Build the URL with selected options
-    url = f"https://api.46elks.com/a1/sms"
+    url = "https://api.46elks.com/a1/sms"
 
     response = requests.post(url, data=payload, auth=(username, password))
 
