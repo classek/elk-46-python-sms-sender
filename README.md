@@ -18,11 +18,13 @@ Features:
 Flash SMS Option: Send messages as flash SMS if desired.
 Dry Run Option: Test the SMS sending functionality without actually sending an SMS.
 User-Friendly Interface: Simple and intuitive GUI for easy interaction.
+
 Usage:
 Input your 46elks username, password, recipient's phone number, sender name, and message text.
 Optionally select the "Flash SMS" or "Dry Run" checkboxes based on your requirements.
 Click the "Send SMS" button to initiate the SMS sending process.
 View the result in the provided label.
+
 Requirements:
 Python 3.x
 Tkinter
